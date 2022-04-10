@@ -1,10 +1,9 @@
-# -*- encoding: utf-8 -*-
-"""
-Copyright (c) 2019 - present AppSeed.us
-"""
-
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 
-# Create your models here.
+class Leads(models.Model):
+    
+    class Meta:
+        verbose_name = 'Leads'
+        verbose_name_plural = 'My Leads'
 
