@@ -1,9 +1,17 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
 
-class Leads(models.Model):
+
+class DashboardTopCards(models.Model):
     
     class Meta:
-        verbose_name = 'Leads'
-        verbose_name_plural = 'My Leads'
+        verbose_name = 'Dashboard Top'
+        verbose_name_plural = 'Dashboard Top Cards'
 
+    main_theme = models.CharField(max_length=100)
+    money = models.FloatField(default=100)
+    users = models.FloatField(default=100)
+    new_clients = models.FloatField(default=100)
+    sales = models.FloatField(default=100)
+
+    def __str__(self):
+        return self.main_theme
