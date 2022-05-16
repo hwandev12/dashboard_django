@@ -4,6 +4,7 @@
 {% block stylesheets %}{% endblock stylesheets %} {% block content %}
 
 <div class="container-fluid py-4">
+{% for card in cards %}
   <div class="row">
     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
       <div class="card">
@@ -15,7 +16,7 @@
                   Today's Money
                 </p>
                 <h5 class="font-weight-bolder mb-0">
-                  $53,000
+                  {{ card.money }}
                   <span class="text-success text-sm font-weight-bolder"
                     >+55%</span
                   >
@@ -46,7 +47,7 @@
                   Today's Users
                 </p>
                 <h5 class="font-weight-bolder mb-0">
-                  2,300
+                  {{ card.users }}
                   <span class="text-success text-sm font-weight-bolder"
                     >+3%</span
                   >
@@ -77,7 +78,7 @@
                   New Clients
                 </p>
                 <h5 class="font-weight-bolder mb-0">
-                  +3,462
+                  {{ card.new_clients }}
                   <span class="text-danger text-sm font-weight-bolder"
                     >-2%</span
                   >
@@ -108,7 +109,7 @@
                   Sales
                 </p>
                 <h5 class="font-weight-bolder mb-0">
-                  $103,430
+                  {{ card.sales }}
                   <span class="text-success text-sm font-weight-bolder"
                     >+5%</span
                   >
@@ -127,6 +128,7 @@
       </div>
     </div>
   </div>
+{% endfor %}
   <div class="row mt-4">
     <div class="col-lg-7 mb-lg-0 mb-4">
       <div class="card">
