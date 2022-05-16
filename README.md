@@ -9,6 +9,9 @@ Customer Relationship Managment ga asoslangan admin page
 ![image](https://user-images.githubusercontent.com/102412893/168459280-730a2ddb-3d00-4093-9bee-1034a96ff5ce.png)
 ![image](https://user-images.githubusercontent.com/102412893/168459304-0925dd63-603b-4c2e-8f9d-d4dc8a2fc231.png)
 ![image](https://user-images.githubusercontent.com/102412893/168459312-fbb65061-1b0c-4c0b-90f8-3ab33983e83c.png)
+# Admin
+![image](https://user-images.githubusercontent.com/102412893/168608475-383239b5-4bf0-4821-b6d6-46ee41d63e42.png)
+
 
 
 
