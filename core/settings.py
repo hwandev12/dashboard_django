@@ -103,8 +103,19 @@ USE_L10N = True
 
 USE_TZ = True
 
+USE_THOUSAND_SEPARATOR = True
+
+THOUSAND_SEPARATOR = ','
+
+DECIMAL_SEPARATOR = '.'
+
+NUMBER_GROUPING = 3
+
+
 #############################################################
 # SRC: https://devcenter.heroku.com/articles/django-assets
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
@@ -119,3 +130,4 @@ STATICFILES_DIRS = (
 
 #############################################################
 #############################################################
+
