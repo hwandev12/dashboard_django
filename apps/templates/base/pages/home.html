@@ -82,27 +82,21 @@
                         <div class="carousel-item active">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <h1 class="banner_taital">Get Start <br>Your favriot shoping</h1>
+                                    <h1 class="banner_taital">Cheapest prices to buy</h1>
                                     <div class="buynow_bt"><a href="#">Buy Now</a></div>
                                 </div>
                             </div>
                         </div>
+                        {% for slider in sliders %}
                         <div class="carousel-item">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <h1 class="banner_taital">Get Start <br>Your favriot shoping</h1>
+                                    <h1 class="banner_taital" style="width: 800px !important; margin-left: auto; margin-right: auto;">{{ slider.slider_text }}</h1>
                                     <div class="buynow_bt"><a href="#">Buy Now</a></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <h1 class="banner_taital">Get Start <br>Your favriot shoping</h1>
-                                    <div class="buynow_bt"><a href="#">Buy Now</a></div>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                     <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
                         <i class="fa fa-angle-left"></i>
