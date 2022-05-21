@@ -1,18 +1,29 @@
 {% load static %}
+<style>
+    .box_main {
+        cursor: pointer;
+    }
+    .second_img {
+        margin-top: 20px;
+    }
+    .box_main:hover img {
+        transform: scale(1.1);
+    }
+</style>
 <!-- fashion section start -->
 <div class="fashion_section">
     <div id="main_slider" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="container">
-                    <h1 class="fashion_taital" style="color: white;">Xiomi Redmi Phones</h1>
+                    <h1 class="fashion_taital" style="color: white;">Samsung phones</h1>
                     <div class="fashion_section_2">
                         <div class="row">
                             <div class="col-lg-4 col-sm-4">
                                 <div class="box_main">
-                                    <h4 class="shirt_text">Man T -shirt</h4>
-                                    <p class="price_text">Price <span style="color: #262626;">$ 30</span></p>
-                                    <div class="tshirt_img"><img src="{% static 'images/tshirt-img.png' %}"></div>
+                                    <h4 class="shirt_text">Samsung a31</h4>
+                                    <p class="price_text">Price <span style="color: #262626;">$ 210</span></p>
+                                    <div class="tshirt_img"><img src="{% static 'images/samsung-removebg-preview.png' %}"></div>
                                     <div class="btn_main">
                                         <div class="buy_bt"><a href="#">Buy Now</a></div>
                                         <div class="seemore_bt"><a href="#">See More</a></div>
@@ -21,9 +32,9 @@
                             </div>
                             <div class="col-lg-4 col-sm-4">
                                 <div class="box_main">
-                                    <h4 class="shirt_text">Man -shirt</h4>
-                                    <p class="price_text">Price <span style="color: #262626;">$ 30</span></p>
-                                    <div class="tshirt_img"><img src="{% static 'images/dress-shirt-img.png' %}"></div>
+                                    <h4 class="shirt_text">Samsung a50</h4>
+                                    <p class="price_text">Price <span style="color: #262626;">$ 350</span></p>
+                                    <div class="tshirt_img"><img src="{% static 'images/samsung_a50-removebg-preview.png' %}"></div>
                                     <div class="btn_main">
                                         <div class="buy_bt"><a href="#">Buy Now</a></div>
                                         <div class="seemore_bt"><a href="#">See More</a></div>
@@ -32,9 +43,9 @@
                             </div>
                             <div class="col-lg-4 col-sm-4">
                                 <div class="box_main">
-                                    <h4 class="shirt_text">Woman Scart</h4>
-                                    <p class="price_text">Price <span style="color: #262626;">$ 30</span></p>
-                                    <div class="tshirt_img"><img src="{% static 'images/women-clothes-img.png' %}">
+                                    <h4 class="shirt_text">Samsung a90</h4>
+                                    <p class="price_text">Price <span style="color: #262626;">$ 620</span></p>
+                                    <div class="tshirt_img"><img class="second_img" width="260" src="{% static 'images/samsung_a91-removebg-preview.png' %}">
                                     </div>
                                     <div class="btn_main">
                                         <div class="buy_bt"><a href="#">Buy Now</a></div>
