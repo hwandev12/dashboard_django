@@ -28,3 +28,18 @@ class FashionCards(models.Model):
     def __str__(self):
         return self.phone_type
 
+
+# create phone back covers
+class PhoneBackCovers(models.Model):
+
+    class Meta:
+        verbose_name = 'Phone Back Cover'
+        verbose_name_plural = 'Phone Back Covers'
+
+    cover_name = models.CharField(max_length=100)
+    cover_price = models.IntegerField(default=5)
+    cover_image = models.ImageField()
+
+    def __str__(self):
+        return self.cover_name
+
