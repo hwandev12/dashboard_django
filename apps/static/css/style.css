@@ -569,10 +569,10 @@ a:hover {
 
 .box_main {
     width: 100%;
-    background-color: #ffffff;
+    background-color: #ddd;
     height: auto;
     padding: 20px;
-    box-shadow: 0px 0 30px 10px #f0f0f0;
+    box-shadow: 2px 2px 5px #ccc;
     margin-bottom: 20px;
 }
 
