@@ -3,3 +3,4 @@ from .models import *
 
 admin.site.register(HomeSliders)
 admin.site.register(FashionCards)
+admin.site.register(PhoneBackCovers)
