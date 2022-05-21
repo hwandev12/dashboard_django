@@ -11,6 +11,11 @@ Customer Relationship Managment ga asoslangan admin page
 ![image](https://user-images.githubusercontent.com/102412893/168459312-fbb65061-1b0c-4c0b-90f8-3ab33983e83c.png)
 # Admin
 ![image](https://user-images.githubusercontent.com/102412893/168608475-383239b5-4bf0-4821-b6d6-46ee41d63e42.png)
+# Admin page bu organiserlar uchun va bu dashboard asosiy websaytga ulangan va ma'lumotni live websaytdan oladi va dashboardga malumot junatadi
+![image](https://user-images.githubusercontent.com/102412893/169663387-9c33e9d5-460f-492b-8057-3dd83bd3d1bf.png)
+# Backend orqali keladigon malumot
+![image](https://user-images.githubusercontent.com/102412893/169663420-b1debe42-9449-4305-b588-34b31c7402d4.png)
+![image](https://user-images.githubusercontent.com/102412893/169663434-d57a0fc5-99fc-4787-b683-b6f11f6657fc.png)
 
 
 
