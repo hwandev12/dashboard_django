@@ -43,3 +43,17 @@ class PhoneBackCovers(models.Model):
     def __str__(self):
         return self.cover_name
 
+
+# create phone accessories
+class PhoneAccessories(models.Model):
+
+    class Meta:
+        verbose_name = 'Phone Accessories'
+        verbose_name_plural = 'Phone Accessories'
+
+    accessories_name = models.CharField(max_length=100)
+    accessories_price = models.IntegerField(default=4)
+    accessories_image = models.ImageField()
+
+    def __str__(self):
+        return self.accessories_name
