@@ -16,6 +16,7 @@ Customer Relationship Managment ga asoslangan admin page
 # Backend orqali keladigon malumot
 ![image](https://user-images.githubusercontent.com/102412893/169663420-b1debe42-9449-4305-b588-34b31c7402d4.png)
 ![image](https://user-images.githubusercontent.com/102412893/169663434-d57a0fc5-99fc-4787-b683-b6f11f6657fc.png)
+# Web sayt bu harid qilish va login qila olishi, profile qismiga kira olishi va sotib olishi uchun bera oladigon formalar ishlash jarayonida!
 
 
 
