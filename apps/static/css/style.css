@@ -771,9 +771,9 @@ a:hover {
 .loader {
     border: 16px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 16px solid #414744;
+    border-top: 16px solid #00ff7d;
     border-right: 16px solid #f26522;
-    border-bottom: 16px solid #414744;
+    border-bottom: 16px solid #00ff7d;
     border-left: 16px solid #f26522;
     width: 120px;
     height: 120px;
