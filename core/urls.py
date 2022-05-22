@@ -4,7 +4,7 @@ from django.conf.urls.static import static
 from django.urls import path, include
 import random, string
 
-x = ''.join(random.choices(string.ascii_letters + string.digits, k=16))
+x = ''.join(random.choices(string.ascii_letters + string.digits, k=30))
 
 urlpatterns = [
     path('admin/', admin.site.urls),
