@@ -60,7 +60,7 @@
                       <div class="login_menu">
                           <ul>
                               {% if request.user.is_authenticated %}
-                                  <li><a href="#">
+                                  <li><a href="{% url 'phone:base_logout' %}">
                                       <span class="pl-1">Logout</span></a>
                                   </li>
                                   <li><a href="#">
