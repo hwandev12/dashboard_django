@@ -10,6 +10,9 @@
                            <li><a href="#">New Releases</a></li>
                            <li><a href="#">Today's Deals</a></li>
                            <li><a href="#">Customer Service</a></li>
+                            {% if request.user.is_organiser %}
+                                <li><a href="{% url 'developer:home' %}">Developer</a></li>
+                            {% endif %}
                         </ul>
                      </div>
                   </div>
