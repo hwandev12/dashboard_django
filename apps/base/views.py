@@ -23,7 +23,7 @@ def base_home(request):
 
 # create sign up view
 class SignupView(CreateView):
-    template_name = 'base/../templates/registration/signup.html'
+    template_name = 'registration/signup.html'
     initial = {'key': 'value'}
     form_class = RegisterForm
 

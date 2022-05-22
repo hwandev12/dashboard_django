@@ -61,9 +61,11 @@
                           <ul>
                               {% if request.user.is_authenticated %}
                                   <li><a href="#">
-                                      {#                              <i class="fa-solid fa-arrow-right-to-bracket"></i>#}
                                       <span class="pl-1">Logout</span></a>
                                   </li>
+                                  <li><a href="#">
+                                      <span class="pl-1">{{ request.user.username }}</span>
+                                  </a></li>
                               {% else %}
                                   <li><a href="{% url 'phone:base_login' %}">
                                       <span class="pl-1">Login</span></a>
@@ -71,7 +73,7 @@
                               {% endif %}
                               {% if not request.user.is_authenticated %}
                                   <li><a href="{% url 'phone:base_registration' %}">
-                                      {#                              <i class="fa-solid fa-arrow-up-right-from-square"></i>#}
+                                      {#<i class="fa-solid fa-arrow-up-right-from-square"></i>#}
                                       <span class="pl-1">Sign Up</span></a>
                                   </li>
                               {% endif %}
@@ -81,7 +83,7 @@
                </div>
             </div>
          </div>
-         <!-- header section end -->
+        <!-- header section end -->
          <!-- banner section start -->
          <div class="banner_section layout_padding">
             <div class="container">
