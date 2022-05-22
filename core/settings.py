@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.authentication',
     'apps.home',
     'apps.base',
     'crispy_forms'
@@ -131,6 +132,8 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = (
     os.path.join(CORE_DIR, 'apps/static'),
 )
+
+AUTH_USER_MODEL = 'authentication.User'
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 30
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
