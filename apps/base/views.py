@@ -1,9 +1,7 @@
 from django.contrib import messages
-from django.shortcuts import render, reverse, redirect
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import LoginView
+from django.shortcuts import render, redirect
 from django.views.generic import *
-from . import models
 from .forms import *
 from .models import *
 
@@ -25,7 +23,7 @@ def base_home(request):
 
 # create sign up view
 class SignupView(CreateView):
-    template_name = 'base/registration/signup.html'
+    template_name = 'base/../templates/registration/signup.html'
     initial = {'key': 'value'}
     form_class = RegisterForm
 
@@ -45,3 +43,20 @@ class SignupView(CreateView):
 
         return render(request, self.template_name, {'form': form})
 
+
+# create login view here
+class LoginView(LoginView):
+    form_class = LoginForm
+
+    def form_valid(self, form):
+        remember_me = form.cleaned_data.get('remember_me')
+
+        if not remember_me:
+            # set session expiry to 0 seconds. So it will automatically close the session after the browser is closed.
+            self.request.session.set_expiry(0)
+
+            # Set session as modified to force data updates/cookie to be saved.
+            self.request.session.modified = True
+
+        # else browser session will be as long as the session cookie time "SESSION_COOKIE_AGE" defined in settings.py
+        return super(LoginView, self).form_valid(form)
