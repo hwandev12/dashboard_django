@@ -1,6 +1,8 @@
 from django.urls import path, re_path
 from apps.home import views
 
+app_name = 'base'
+
 urlpatterns = [
     # The home page
     path('', views.index, name='home'),
