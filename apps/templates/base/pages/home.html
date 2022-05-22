@@ -50,25 +50,33 @@
                         <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
                         <img src="{% static 'images/flag-uk.png' %}" alt="flag" class="mr-2 " title="United Kingdom"> English <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
                         </a>
-                        <div class="dropdown-menu ">
-                           <a href="#" class="dropdown-item">
-                           <img src="{% static 'images/flag-france.png' %}" class="mr-2" alt="flag">
-                           French
-                           </a>
-                        </div>
+                         <div class="dropdown-menu ">
+                             <a href="#" class="dropdown-item">
+                                 <img src="{% static 'images/flag-france.png' %}" class="mr-2" alt="flag">
+                                 French
+                             </a>
+                         </div>
                      </div>
-                     <div class="login_menu">
-                        <ul>
-                           <li><a href="#">
-{#                              <i class="fa-solid fa-arrow-right-to-bracket"></i>#}
-                              <span class="pl-1">Login</span></a>
-                           </li>
-                           <li><a href="{% url 'phone:registration' %}">
-{#                              <i class="fa-solid fa-arrow-up-right-from-square"></i>#}
-                              <span class="pl-1">Sign Up</span></a>
-                           </li>
-                        </ul>
-                     </div>
+                      <div class="login_menu">
+                          <ul>
+                              {% if request.user.is_authenticated %}
+                                  <li><a href="#">
+                                      {#                              <i class="fa-solid fa-arrow-right-to-bracket"></i>#}
+                                      <span class="pl-1">Logout</span></a>
+                                  </li>
+                              {% else %}
+                                  <li><a href="{% url 'phone:base_login' %}">
+                                      <span class="pl-1">Login</span></a>
+                                  </li>
+                              {% endif %}
+                              {% if not request.user.is_authenticated %}
+                                  <li><a href="{% url 'phone:base_registration' %}">
+                                      {#                              <i class="fa-solid fa-arrow-up-right-from-square"></i>#}
+                                      <span class="pl-1">Sign Up</span></a>
+                                  </li>
+                              {% endif %}
+                          </ul>
+                      </div>
                   </div>
                </div>
             </div>
