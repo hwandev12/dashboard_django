@@ -17,7 +17,10 @@ Customer Relationship Managment ga asoslangan admin page
 ![image](https://user-images.githubusercontent.com/102412893/169663420-b1debe42-9449-4305-b588-34b31c7402d4.png)
 ![image](https://user-images.githubusercontent.com/102412893/169663434-d57a0fc5-99fc-4787-b683-b6f11f6657fc.png)
 # Web sayt bu harid qilish va login qila olishi, profile qismiga kira olishi va sotib olishi uchun bera oladigon formalar ishlash jarayonida!
-
+# Asosiy Frontend login page
+![image](https://user-images.githubusercontent.com/102412893/169694400-cbc9d0b0-52bb-43ac-bdfd-c9251a832426.png)
+# Asosiy Frontend sign up page
+![image](https://user-images.githubusercontent.com/102412893/169694425-134c8f11-05dd-40d0-b77c-1b6ddbda8beb.png)
 
 
 
