@@ -21,6 +21,10 @@ Customer Relationship Managment ga asoslangan admin page
 ![image](https://user-images.githubusercontent.com/102412893/169694400-cbc9d0b0-52bb-43ac-bdfd-c9251a832426.png)
 # Asosiy Frontend sign up page
 ![image](https://user-images.githubusercontent.com/102412893/169694425-134c8f11-05dd-40d0-b77c-1b6ddbda8beb.png)
+# Profile Qismi
+![image](https://user-images.githubusercontent.com/102412893/169869794-b3e8515e-bd93-4f7a-9bcc-275e22579c6c.png)
+![image](https://user-images.githubusercontent.com/102412893/169869855-2244c7f1-69b8-4936-b51c-2db633f54a99.png)
+
 
 
 
