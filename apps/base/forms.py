@@ -1,8 +1,10 @@
+import phonenumbers
 from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.forms import UserCreationForm
 from phonenumber_field.formfields import PhoneNumberField
+from phonenumber_field.widgets import PhoneNumberPrefixWidget
 
 from .models import Profile
 
@@ -64,22 +66,25 @@ class RegisterForm(UserCreationForm):
                                  'placeholder': 'Email',
                                  'class': 'form-control',
                              }))
-    phone = PhoneNumberField(widget=forms.TextInput(attrs={
-                                 'placeholder': '+998934568957',
-                                 'class': 'form-control',
-                             }), required=True)
-    work_phone = PhoneNumberField(widget=forms.TextInput(attrs={
-                                 'placeholder': '+998934568957',
-                                 'class': 'form-control',
-                             }), required=False)
-    address = PhoneNumberField(widget=forms.TextInput(attrs={
-                                 'placeholder': "Andijon shaxri, Seramov Ko'chasi",
-                                 'class': 'form-control',
-                             }), required=False)
-    work_field = PhoneNumberField(widget=forms.TextInput(attrs={
-                                 'placeholder': "Ex: Teacher",
-                                 'class': 'form-control',
-                             }), required=False)
+    phone = PhoneNumberField(widget=PhoneNumberPrefixWidget(
+        initial='UZ',
+        attrs={
+            'class': 'form-control',
+        }), required=True)
+    work_phone = PhoneNumberField(widget=PhoneNumberPrefixWidget(
+        initial='UZ',
+        attrs={
+            'class': 'form-control'
+        }
+    ), required=True)
+    address = forms.CharField(widget=forms.TextInput(attrs={
+        'placeholder': "Andijon shaxri, Seramov Ko'chasi",
+        'class': 'form-control',
+    }), required=False)
+    work_field = forms.CharField(widget=forms.TextInput(attrs={
+        'placeholder': "Ex: Teacher",
+        'class': 'form-control',
+    }), required=False)
     password1 = forms.CharField(max_length=50,
                                 required=True,
                                 widget=forms.PasswordInput(
@@ -102,7 +107,7 @@ class RegisterForm(UserCreationForm):
     class Meta:
         model = User
         fields = [
-            'first_name', 'last_name', 'username', 'email', 'password1',
+            'first_name', 'last_name', 'username', 'email', 'phone', 'work_phone', 'address', 'work_field', 'password1',
             'password2'
         ]
 
@@ -126,3 +131,4 @@ class LoginForm(AuthenticationForm):
     class Meta:
         model = User
         fields = ['username', 'password', 'remember_me']
+
