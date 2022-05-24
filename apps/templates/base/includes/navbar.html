@@ -5,10 +5,10 @@
                    <div class="col-sm-12">
                      <div class="custom_menu">
                         <ul>
+                           <li><a href="{% url 'phone:base_home' %}">Home</a></li>
                            <li><a href="#">Best Sellers</a></li>
                            <li><a href="#">Gift Ideas</a></li>
                            <li><a href="#">New Releases</a></li>
-                           <li><a href="#">Today's Deals</a></li>
                            <li><a href="#">Customer Service</a></li>
                             {% if request.user.is_organiser %}
                                 <li><a href="{% url 'developer:home' %}">Developer</a></li>
