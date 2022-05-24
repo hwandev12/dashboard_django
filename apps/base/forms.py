@@ -1,8 +1,10 @@
 from django import forms
+from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.forms import UserCreationForm
+from phonenumber_field.formfields import PhoneNumberField
+
 from .models import Profile
-from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
@@ -62,6 +64,22 @@ class RegisterForm(UserCreationForm):
                                  'placeholder': 'Email',
                                  'class': 'form-control',
                              }))
+    phone = PhoneNumberField(widget=forms.TextInput(attrs={
+                                 'placeholder': '+998934568957',
+                                 'class': 'form-control',
+                             }), required=True)
+    work_phone = PhoneNumberField(widget=forms.TextInput(attrs={
+                                 'placeholder': '+998934568957',
+                                 'class': 'form-control',
+                             }), required=False)
+    address = PhoneNumberField(widget=forms.TextInput(attrs={
+                                 'placeholder': "Andijon shaxri, Seramov Ko'chasi",
+                                 'class': 'form-control',
+                             }), required=False)
+    work_field = PhoneNumberField(widget=forms.TextInput(attrs={
+                                 'placeholder': "Ex: Teacher",
+                                 'class': 'form-control',
+                             }), required=False)
     password1 = forms.CharField(max_length=50,
                                 required=True,
                                 widget=forms.PasswordInput(
