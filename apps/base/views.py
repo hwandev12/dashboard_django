@@ -2,7 +2,7 @@ import phonenumbers
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.views.generic import *
 
 from .forms import *
@@ -87,3 +87,27 @@ def profile(request):
         'user_form': user_form,
         'profile_form': profile_form
     })
+
+
+@login_required
+def update_profile(request, pk):
+    if request.method == 'POST':
+        user_form = UpdateUserForm(request.POST, instance=request.user)
+        profile_form = UpdateProfileForm(request.POST,
+                                         request.FILES,
+                                         instance=request.user.profile)
+
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            messages.success(request, 'Your profile is updated successfully')
+            return redirect('/profile/')
+    else:
+        user_form = UpdateUserForm(instance=request.user)
+        profile_form = UpdateProfileForm(instance=request.user.profile)
+
+    return render(request, 'base/pages/update_profile.html', {
+        'user_form': user_form,
+        'profile_form': profile_form
+    })
+
