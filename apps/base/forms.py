@@ -18,10 +18,25 @@ class UpdateUserForm(forms.ModelForm):
         widget=forms.TextInput(attrs={'class': 'form-control'}))
     email = forms.EmailField(
         required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    phone = PhoneNumberField(widget=PhoneNumberPrefixWidget(
+        initial='UZ',
+        attrs={
+            'class': 'form-control',
+        }), required=True)
+    work_phone = PhoneNumberField(widget=PhoneNumberPrefixWidget(
+        initial='UZ',
+        attrs={
+            'class': 'form-control'
+        }
+    ), required=True)
+    address = forms.CharField(widget=forms.TextInput(attrs={
+        'placeholder': "Andijon shaxri, Seramov Ko'chasi",
+        'class': 'form-control',
+    }), required=False)
 
     class Meta:
         model = User
-        fields = ['username', 'email']
+        fields = ['username', 'email', 'phone', 'first_name', 'last_name', 'work_phone', 'address']
 
 
 class UpdateProfileForm(forms.ModelForm):
