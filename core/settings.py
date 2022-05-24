@@ -1,3 +1,4 @@
+import phonenumbers
 import os
 from decouple import config
 from unipath import Path
@@ -28,7 +29,8 @@ INSTALLED_APPS = [
     'apps.authentication',
     'apps.home',
     'apps.base',
-    'crispy_forms'
+    'crispy_forms',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
@@ -42,9 +44,13 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+PHONENUMBER_DB_FORMAT = 'NATIONAL'
+PHONENUMBER_DEFAULT_REGION = 'UZ'
+
 ROOT_URLCONF = 'core.urls'
 LOGIN_REDIRECT_URL = "/"  # Route defined in home/urls.py.py
 TEMPLATE_DIR = os.path.join(CORE_DIR, "apps/templates")  # ROOT dir for templates
+
 
 TEMPLATES = [
     {
@@ -119,15 +125,14 @@ NUMBER_GROUPING = 3
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
+
 STATIC_ROOT = os.path.join(CORE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(CORE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-# Extra places for collectstatic to find static files.
+
 STATICFILES_DIRS = (
     os.path.join(CORE_DIR, 'apps/static'),
 )
@@ -136,10 +141,6 @@ AUTH_USER_MODEL = 'authentication.User'
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 30
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'base/login'
 
-
-#############################################################
-#############################################################
 
