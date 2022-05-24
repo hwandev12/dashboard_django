@@ -1,6 +1,7 @@
 from django import template
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render
 from django.template import loader
 from django.urls import reverse
 from .models import DashboardTopCards
@@ -38,3 +39,7 @@ def pages(request):
         html_template = loader.get_template('home/page-500.html')
         return HttpResponse(html_template.render(context, request))
 
+
+@login_required(login_url="/login/")
+def billing(request):
+    return render(request, 'home/billing.html')
