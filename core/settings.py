@@ -44,9 +44,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-PHONENUMBER_DB_FORMAT = 'NATIONAL'
-PHONENUMBER_DEFAULT_REGION = 'UZ'
-
 ROOT_URLCONF = 'core.urls'
 LOGIN_REDIRECT_URL = "/"  # Route defined in home/urls.py.py
 TEMPLATE_DIR = os.path.join(CORE_DIR, "apps/templates")  # ROOT dir for templates
@@ -118,6 +115,10 @@ THOUSAND_SEPARATOR = ','
 DECIMAL_SEPARATOR = '.'
 
 NUMBER_GROUPING = 3
+
+PHONENUMBER_DB_FORMAT = "NATIONAL"
+PHONENUMBER_DEFAULT_REGION = 'UZ'
+PHONENUMBER_DEFAULT_FORMAT = "NATIONAL"
 
 
 #############################################################
