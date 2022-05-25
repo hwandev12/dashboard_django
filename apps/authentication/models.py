@@ -12,5 +12,6 @@ class User(AbstractUser):
     address = models.CharField(max_length=200)
     phone = models.IntegerField()
     work_phone = models.IntegerField()
+    bio = models.CharField(max_length=200)
 
 
