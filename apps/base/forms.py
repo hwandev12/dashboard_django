@@ -18,17 +18,14 @@ class UpdateUserForm(forms.ModelForm):
         widget=forms.TextInput(attrs={'class': 'form-control'}))
     email = forms.EmailField(
         required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    phone = PhoneNumberField(widget=PhoneNumberPrefixWidget(
-        initial='UZ',
+    phone = forms.IntegerField(widget=forms.TextInput(
         attrs={
             'class': 'form-control',
         }), required=True)
-    work_phone = PhoneNumberField(widget=PhoneNumberPrefixWidget(
-        initial='UZ',
+    work_phone = forms.IntegerField(widget=forms.TextInput(
         attrs={
-            'class': 'form-control'
-        }
-    ), required=True)
+            'class': 'form-control',
+        }), required=True)
     address = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': "Andijon shaxri, Seramov Ko'chasi",
         'class': 'form-control',
@@ -81,17 +78,14 @@ class RegisterForm(UserCreationForm):
                                  'placeholder': 'Email',
                                  'class': 'form-control',
                              }))
-    phone = PhoneNumberField(widget=PhoneNumberPrefixWidget(
-        initial='UZ',
+    phone = forms.IntegerField(widget=forms.TextInput(
         attrs={
             'class': 'form-control',
         }), required=True)
-    work_phone = PhoneNumberField(widget=PhoneNumberPrefixWidget(
-        initial='UZ',
+    work_phone = forms.IntegerField(widget=forms.TextInput(
         attrs={
-            'class': 'form-control'
-        }
-    ), required=True)
+            'class': 'form-control',
+        }), required=True)
     address = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': "Andijon shaxri, Seramov Ko'chasi",
         'class': 'form-control',
