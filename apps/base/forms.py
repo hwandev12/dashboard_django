@@ -94,6 +94,10 @@ class RegisterForm(UserCreationForm):
         'placeholder': "Ex: Teacher",
         'class': 'form-control',
     }), required=False)
+    bio = forms.CharField(widget=forms.TextInput(attrs={
+        'placeholder': "Bio",
+        'class': 'form-control',
+    }), required=False)
     password1 = forms.CharField(max_length=50,
                                 required=True,
                                 widget=forms.PasswordInput(
@@ -116,7 +120,7 @@ class RegisterForm(UserCreationForm):
     class Meta:
         model = User
         fields = [
-            'first_name', 'last_name', 'username', 'email', 'phone', 'work_phone', 'address', 'work_field', 'password1',
+            'first_name', 'last_name', 'username', 'email', 'phone', 'work_phone', 'address', 'work_field', 'bio', 'password1',
             'password2'
         ]
 
