@@ -39,8 +39,14 @@ def index(request):
 #         html_template = loader.get_template('home/page-500.html')
 #         return HttpResponse(html_template.render(context, request))
 
+# tables
 def tables(request):
     return render(request, 'home/tables.html')
+
+
+# virtual reality
+def virtual_reality(request):
+    return render(request, 'home/virtual-reality.html')
 
 
 @login_required(login_url="/login/")
