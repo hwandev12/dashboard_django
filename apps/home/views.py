@@ -54,6 +54,11 @@ def rtl(request):
     return render(request, 'home/rtl.html')
 
 
+# profiles section
+def profiles(request):
+    return render(request, 'home/profile.html')
+
+
 @login_required(login_url="/login/")
 def billing(request):
     return render(request, 'home/billing.html')
