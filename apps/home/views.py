@@ -49,6 +49,11 @@ def virtual_reality(request):
     return render(request, 'home/virtual-reality.html')
 
 
+# RTL section
+def rtl(request):
+    return render(request, 'home/rtl.html')
+
+
 @login_required(login_url="/login/")
 def billing(request):
     return render(request, 'home/billing.html')
